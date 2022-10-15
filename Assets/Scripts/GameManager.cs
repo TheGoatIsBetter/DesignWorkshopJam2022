@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     //static (stays same) game manager instance
     public static GameManager instance;
     public static AudioManager audioManager;
+    
+    public int firesPutOut = 0;
 
     [Header("Lists")]
     public List<PlayerController> players;
