@@ -57,7 +57,7 @@ public class KeyboardController : PlayerController
         {
             hose.ShootWater();
         }
-        if (Input.GetKeyDown(pause))
+        if (Input.GetKey(pause))
         {
             GameManager.instance.PauseGame();
         }

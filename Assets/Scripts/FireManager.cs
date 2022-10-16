@@ -17,4 +17,17 @@ public class FireManager : MonoBehaviour
     {
         
     }
+
+    public void SpawnRandomFires()
+    {
+        
+        foreach(FireSpawner fireSpawner in fireSpawnerList)
+        {
+            Debug.Log("ddd");
+            if (Random.Range(0,100) > 50)
+            {
+                fireSpawner.SpawnFire();
+            }
+        }
+    }
 }

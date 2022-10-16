@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
     public void ActivateGameplayState()
     {
         DeactivateAllStates();
+        gameplayStateObject.SetActive(true);
 
         //kill the player if they exist
         if (players.Count > 0)
@@ -147,8 +148,8 @@ public class GameManager : MonoBehaviour
         //reset fires extinguished
         firesPutOut = 0;
 
-        gameplayStateObject.SetActive(true);
-
         
+
+        fireManager.SpawnRandomFires();
     }
 }
