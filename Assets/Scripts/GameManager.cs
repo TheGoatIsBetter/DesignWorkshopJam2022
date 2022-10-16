@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
 
     #endregion variables
 
+    void Load(string savedData)
+    {
+        JsonUtility.FromJsonOverwrite(savedData, this);
+    }
+
     //Awake is called before Start
     private void Awake()
     {

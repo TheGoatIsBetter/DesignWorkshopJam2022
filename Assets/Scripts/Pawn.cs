@@ -15,6 +15,11 @@ public class Pawn : MonoBehaviour
     public float baseTurnSpeed;
     public float turnSpeed;
 
+    void Load(string savedData)
+    {
+        JsonUtility.FromJsonOverwrite(savedData, this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
