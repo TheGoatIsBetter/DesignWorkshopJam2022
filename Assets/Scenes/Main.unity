@@ -6722,6 +6722,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
   m_PrefabInstance: {fileID: 5814901459762990175}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348893250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7546524515836999443, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+  m_PrefabInstance: {fileID: 5814901459762990175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840dd5d460ebc80488977cfa6cf95373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1348893254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5814901461111584353, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+  m_PrefabInstance: {fileID: 5814901459762990175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbabd59843d3784cb43afdec180b353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378533454
 GameObject:
   m_ObjectHideFlags: 0
@@ -10606,6 +10628,14 @@ PrefabInstance:
       propertyPath: fire
       value: 323
       objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: hose
+      value: 
+      objectReference: {fileID: 1348893250}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: pawn
+      value: 
+      objectReference: {fileID: 1348893254}
     - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
       propertyPath: m_RootOrder
       value: 4

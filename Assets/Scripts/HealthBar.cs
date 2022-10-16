@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if(GameManager.instance.players.Count > 0)
         {
             health = GameManager.instance.players[0].GetComponent<Health>();

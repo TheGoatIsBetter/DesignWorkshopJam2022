@@ -4618,6 +4618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 705047120259576893}
     m_Modifications:
+    - target: {fileID: 1329965094541514558, guid: 63d4833147a340a4ca335dd18a5086d1, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5896933986285138250, guid: 63d4833147a340a4ca335dd18a5086d1, type: 3}
       propertyPath: m_Name
       value: Wall (4)
