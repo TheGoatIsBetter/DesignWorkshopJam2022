@@ -16,5 +16,5 @@ public abstract class Controller : MonoBehaviour
     protected abstract void OnDestroy();
 
     // Update is called once per frame
-    protected abstract void Update();
+    protected abstract void FixedUpdate();
 }
