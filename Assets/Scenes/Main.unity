@@ -3048,22 +3048,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697671512}
     m_Modifications:
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: fire
-      value: 323
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: hose
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: pawn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3111,6 +3095,22 @@ PrefabInstance:
     - target: {fileID: 6150593614918234973, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_Name
       value: PlayerSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: fire
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: hose
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: pawn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
@@ -10177,9 +10177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 694568139}
   possibleRooms:
-  - {fileID: 705047120436831423, guid: ecbe77d90cd94eb4fa081cbc36762615, type: 3}
-  numberOfRows: 2
-  numberOfCols: 2
+  - {fileID: 37012055134008223, guid: 812394828e2635d43b66e2d895a1274c, type: 3}
+  - {fileID: 8078322715990899884, guid: 6c760e343cf03834c8907ec75bfd324a, type: 3}
+  numberOfRows: 5
+  numberOfCols: 5
   randomSeed: 0
 --- !u!1 &2026648911
 GameObject:
