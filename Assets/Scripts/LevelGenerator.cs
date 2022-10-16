@@ -20,9 +20,14 @@ public class LevelGenerator : MonoBehaviour
     public int randomSeed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        GenerateLevel();
+        
+    }
+
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -95,6 +100,8 @@ public class LevelGenerator : MonoBehaviour
                 }
             }
         }
+
+        GameManager.instance.fireManager.SpawnRandomFires();
     }
 
     //get the next room in the sequence based on rules

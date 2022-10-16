@@ -136,6 +136,10 @@ public class GameManager : MonoBehaviour
         DeactivateAllStates();
         gameplayStateObject.SetActive(true);
 
+        level.clearLevel();
+        level.levelGenerator.GenerateLevel();
+
+
         //kill the player if they exist
         if (players.Count > 0)
         {
@@ -148,8 +152,7 @@ public class GameManager : MonoBehaviour
         //reset fires extinguished
         firesPutOut = 0;
 
-        
 
-        fireManager.SpawnRandomFires();
+
     }
 }

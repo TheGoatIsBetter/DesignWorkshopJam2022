@@ -3066,7 +3066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3143,6 +3143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23350faa19107574d8bfb51bf619765e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelGenerator: {fileID: 2008792985}
   playerSpawns: []
 --- !u!4 &694568140
 Transform:
@@ -3156,8 +3157,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1697671512}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &700280844
 GameObject:
@@ -3804,7 +3805,7 @@ RectTransform:
   - {fileID: 232860478}
   - {fileID: 1321619949}
   m_Father: {fileID: 1697671512}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5476,7 +5477,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1697671512}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1205703908
 MonoBehaviour:
@@ -5801,7 +5802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireManager: {fileID: 1281520032}
-  level: {fileID: 0}
+  level: {fileID: 694568139}
   firesPutOut: 0
   players: []
   playerSpawnPoints: []
@@ -5841,6 +5842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireSpawnerList: []
+  minRange: 0
+  maxRange: 100
+  minForCheck: 50
 --- !u!1 &1290654768
 GameObject:
   m_ObjectHideFlags: 0
@@ -8084,6 +8088,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 694568140}
+  - {fileID: 2008792984}
   - {fileID: 816192568}
   - {fileID: 529225006}
   - {fileID: 1205703907}
@@ -10152,8 +10158,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1697671512}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2008792985
 MonoBehaviour:

@@ -6,6 +6,10 @@ public class FireManager : MonoBehaviour
 {
     public List<FireSpawner> fireSpawnerList;
 
+    [SerializeField] private int minRange;
+    [SerializeField] private int maxRange;
+    [SerializeField] private int minForCheck;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +27,7 @@ public class FireManager : MonoBehaviour
         
         foreach(FireSpawner fireSpawner in fireSpawnerList)
         {
-            Debug.Log("ddd");
-            if (Random.Range(0,100) > 50)
+            if (Random.Range(minRange, maxRange) > minForCheck)
             {
                 fireSpawner.SpawnFire();
             }

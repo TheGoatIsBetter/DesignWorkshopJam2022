@@ -31,7 +31,7 @@ public class Fire : MonoBehaviour
 
         GameManager.instance.firesPutOut += 1;
 
-
+        
         Destroy(gameObject);
     }
 
