@@ -12,12 +12,20 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(GameManager.instance.players.Count > 0)
+        {
+            health = GameManager.instance.players[0].GetComponent<Health>();
+        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthImage.fillAmount = health.currentHealth / health.maxHealth ;
+        if(health != null)
+        {
+            healthImage.fillAmount = health.currentHealth / health.maxHealth;
+        }
+        
     }
 }
