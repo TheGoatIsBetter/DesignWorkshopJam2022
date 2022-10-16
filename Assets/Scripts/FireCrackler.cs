@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class FireCrackler : MonoBehaviour
 {
     public AudioSource fireCrackle;
     public AudioClip fireCrackling;
+    public AudioMixer mainAudioMixer;
+    public float nearestDistance;
+    public float maxDistance = 10.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         fireCrackle = GetComponent<AudioSource>();
         fireCrackling = AudioManager.instance.fireCrackling;
@@ -26,6 +30,8 @@ public class FireCrackler : MonoBehaviour
             fireCrackle.Stop();
         }
 
+
+        UpdateCrackleVolume();
     }
 
     private bool isFireGone()
@@ -36,5 +42,33 @@ public class FireCrackler : MonoBehaviour
                 return false;
         }
         return true;
+    }
+
+    private void UpdateCrackleVolume()
+    {
+        nearestDistance = GetClosestFireDistance();
+    
+        AudioManager.instance.VolumeChange(mainAudioMixer, "FireCrackleVolume", maxDistance / nearestDistance);
+    
+    
+    }
+    
+    public float GetClosestFireDistance()
+    {
+    
+    
+        float closestDist = fireCrackle.maxDistance;
+        foreach (FireSpawner fireSpawner in GameManager.instance.fireManager.fireSpawnerList)
+        {
+            if(fireSpawner.isOccupied) {
+                float dist = Vector3.Distance(fireSpawner.gameObject.transform.position, gameObject.transform.position);
+                if (dist < closestDist)
+                {
+                    closestDist = dist;
+                }
+            }
+        }
+    
+        return closestDist;
     }
 }
