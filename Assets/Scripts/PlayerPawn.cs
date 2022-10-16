@@ -32,7 +32,6 @@ public class PlayerPawn : Pawn, Mover
     List<RaycastHit2D> castCollision = new List<RaycastHit2D>();
     Vector2 direction = Vector2.zero;
     const float COLLISION_OFFSET = 0.1f; //How much of a gap there is between colliders
-    public ContactFilter2D collisionFilter; //Assign in the inspector so the collision ignores water.
 
     public void MovePlayer()
     {
@@ -41,7 +40,6 @@ public class PlayerPawn : Pawn, Mover
             //Detects any collisions that would occur in the space it would move to.
             int count = rigidbodyComponent.Cast(
                 direction,
-                collisionFilter,
                 castCollision,
                 moveSpeed * Time.fixedDeltaTime + COLLISION_OFFSET
             );
@@ -56,7 +54,6 @@ public class PlayerPawn : Pawn, Mover
                 //If both inputs don't work, then perhaps the player can slide across the wall on the x-axis.
                 count = rigidbodyComponent.Cast(
                     new Vector2(direction.x, 0),
-                    collisionFilter,
                     castCollision,
                     moveSpeed * Time.fixedDeltaTime + COLLISION_OFFSET
                 );
@@ -71,7 +68,6 @@ public class PlayerPawn : Pawn, Mover
                     //If the player can't slide along the wal on the x-axis, perhaps the y-axis.
                     count = rigidbodyComponent.Cast(
                         new Vector2(0, direction.y),
-                        collisionFilter,
                         castCollision,
                         moveSpeed * Time.fixedDeltaTime + COLLISION_OFFSET
                     );
