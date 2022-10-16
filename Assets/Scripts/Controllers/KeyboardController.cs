@@ -11,6 +11,7 @@ public class KeyboardController : PlayerController
     [SerializeField] private KeyCode moveRight;
     [SerializeField] private KeyCode moveLeft;
     [SerializeField] private KeyCode fire;
+    [SerializeField] private KeyCode pause;
 
     [Header("External References")]
     [SerializeField] private PlayerHose hose;
@@ -53,6 +54,9 @@ public class KeyboardController : PlayerController
         if (Input.GetKey(fire))
         {
             hose.ShootWater();
+        if (Input.GetKeyDown(pause))
+        {
+            GameManager.instance.PauseGame();
         }
     }
 }

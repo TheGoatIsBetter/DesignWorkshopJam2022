@@ -19,4 +19,6 @@ public class UIGameplay : MonoBehaviour
     {
         fireExtinguishAmount.text = GameManager.instance.firesPutOut.ToString();
     }
+
+    
 }
