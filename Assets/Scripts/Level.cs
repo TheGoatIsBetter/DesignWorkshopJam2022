@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
+    public LevelGenerator levelGenerator;
+
     //store the level after created
     public Room[,] grid;
 
@@ -15,11 +17,14 @@ public class Level : MonoBehaviour
     {
     }
 
+
     //clear everything from the level
     public void clearLevel()
     {
         if(grid != null)
         {
+            GameManager.instance.fireManager.fireSpawnerList.Clear();
+
             playerSpawns.Clear();
             foreach (Room room in grid)
             {
