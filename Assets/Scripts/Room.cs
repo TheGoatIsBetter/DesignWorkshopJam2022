@@ -18,7 +18,13 @@ public class Room : MonoBehaviour
     {
         doorNorth.SetActive(!doors[0]);
         doorEast.SetActive(!doors[1]);
-        doorSouth.SetActive(!doors[2]);
-        doorWest.SetActive(!doors[3]);
+        if (doorSouth != null)
+        {
+            doorSouth.SetActive(!doors[2]);
+        }
+        if (doorWest != null)
+        {
+            doorWest.SetActive(!doors[3]);
+        }
     }
 }

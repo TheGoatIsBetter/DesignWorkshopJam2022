@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 47621f852a1b1484a8004ae3a038577d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Eighties
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 906a7a6ac80d4ea4dbfd4f377e6b04df, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
