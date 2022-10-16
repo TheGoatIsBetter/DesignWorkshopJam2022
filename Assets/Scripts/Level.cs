@@ -10,8 +10,6 @@ public class Level : MonoBehaviour
     //store spawn locations
     public List<Vector3> playerSpawns;
 
-    public LevelGenerator levelGen;
-
     // Start is called before the first frame update
     void Start()
     {
