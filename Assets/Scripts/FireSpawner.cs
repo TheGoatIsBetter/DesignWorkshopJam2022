@@ -6,7 +6,7 @@ public class FireSpawner : MonoBehaviour
 {
     public GameObject objectToSpawn;
     private GameObject fireObject;
-    public Fire fire;
+    public Fire fire = null;
 
     public bool isOccupied = false;
 

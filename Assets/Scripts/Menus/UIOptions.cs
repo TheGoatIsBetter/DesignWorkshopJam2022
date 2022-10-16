@@ -40,38 +40,18 @@ public class UIOptions : MonoBehaviour
     public void OnMainVolumeChange()
     {
         AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.menuButton);
-        VolumeChange(mainAudioMixer, "MasterVolume", mainVolumeSlider);
+        AudioManager.instance.VolumeChange(mainAudioMixer, "MasterVolume", mainVolumeSlider.value);
     }
 
     public void OnMusicVolumeChange()
     {
         AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.menuButton);
-        VolumeChange(mainAudioMixer, "MusicVolume", musicVolumeSlider);
+        AudioManager.instance.VolumeChange(mainAudioMixer, "MusicVolume", musicVolumeSlider.value);
     }
 
     public void OnSoundVolumeChange()
     {
         AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.menuButton);
-        VolumeChange(mainAudioMixer, "SoundVolume", soundVolumeSlider);
-    }
-
-    public void VolumeChange(AudioMixer audioMixer, string nameOfMixer, Slider volumeSlider)
-    {
-        float newVolume = volumeSlider.value;
-        if (newVolume <= 0)
-        {
-            newVolume = -80; //set to bottommost log value for db
-        }
-        else
-        {
-            //>0 so use log10 because decibals
-            newVolume = Mathf.Log10(newVolume);
-
-            //0-20db instead of 0-1
-            newVolume = newVolume * 20;
-
-        }
-
-        audioMixer.SetFloat(nameOfMixer, newVolume);
+        AudioManager.instance.VolumeChange(mainAudioMixer, "SoundVolume", soundVolumeSlider.value);
     }
 }

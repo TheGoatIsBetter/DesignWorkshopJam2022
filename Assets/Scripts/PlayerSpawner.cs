@@ -23,6 +23,10 @@ public class PlayerSpawner : MonoBehaviour
 
         //reset health
         spawnedObject.GetComponent<Health>().currentHealth = spawnedObject.GetComponent<Health>().maxHealth;
+
+        //kickstart the crackling fire
+        FireCrackler fireCrackler = spawnedObject.GetComponentInChildren(typeof(FireCrackler), false) as FireCrackler;
+        fireCrackler.fireCrackle.Play();
     }
 
    

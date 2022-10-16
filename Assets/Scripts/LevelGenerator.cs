@@ -102,6 +102,8 @@ public class LevelGenerator : MonoBehaviour
         }
 
         GameManager.instance.fireManager.SpawnRandomFires();
+
+        
     }
 
     //get the next room in the sequence based on rules
