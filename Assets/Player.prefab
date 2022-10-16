@@ -375,14 +375,14 @@ MonoBehaviour:
   turnSpeed: 5
   collisionFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 8
+      m_Bits: 55
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0

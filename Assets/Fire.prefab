@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6113482153544992958}
   - component: {fileID: 6113482153544992959}
   - component: {fileID: 6396868515157585931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1676979481, guid: b185cbfad23df4546ae5a6de4611c964, type: 3}
   m_Color: {r: 0.9150943, g: 0.43026984, b: 0.21064433, a: 1}
   m_FlipX: 0
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!95 &6396868515157585931
 Animator:
   serializedVersion: 4
