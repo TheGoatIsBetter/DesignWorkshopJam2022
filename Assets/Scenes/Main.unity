@@ -1285,6 +1285,7 @@ Transform:
   - {fileID: 99643833}
   - {fileID: 1422049983}
   - {fileID: 461628739}
+  - {fileID: 1018067319}
   - {fileID: 1348893243}
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -6722,9 +6723,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08ff2c50b8c5206449c165b4dc6eb31b, type: 3}
+  m_Script: {fileID: 11500000, guid: 840dd5d460ebc80488977cfa6cf95373, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
 --- !u!1 &1378533454
 GameObject:
   m_ObjectHideFlags: 0
