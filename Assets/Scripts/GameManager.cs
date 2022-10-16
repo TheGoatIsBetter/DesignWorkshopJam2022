@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour
 
     public int firesPutOut = 0;
 
+
     [Header("Lists")]
     public List<PlayerController> players;
+    public List<GameObject> playerSpawnPoints;
 
 
     [Header("Screen State Objects")]
@@ -126,6 +128,17 @@ public class GameManager : MonoBehaviour
     public void ActivateGameplayState()
     {
         DeactivateAllStates();
+
+        //kill the player if they exist
+        if (players.Count > 0)
+        {
+            Destroy(players[0].gameObject);
+        }
+
+        //get a random spawner and spawn the player at it
+        playerSpawnPoints[Random.Range(0, playerSpawnPoints.Count - 1)].GetComponent<PlayerSpawner>().SpawnPlayer();
+
+
         gameplayStateObject.SetActive(true);
     }
 }
