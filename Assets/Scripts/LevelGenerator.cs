@@ -11,8 +11,8 @@ public class LevelGenerator : MonoBehaviour
     public List<Room> possibleRooms;
 
     //map data
-    private float roomWidth = 7.0f;
-    private float roomHeight = 7.0f;
+    private float roomWidth = 20.0f;
+    private float roomHeight = 20.0f;
 
     public int numberOfRows;
     public int numberOfCols;
