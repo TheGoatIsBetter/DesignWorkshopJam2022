@@ -28,13 +28,14 @@ public class KeyboardController : PlayerController
     }
 
     // Update is called once per frame
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
     }
 
     protected override void ProcessInputs()
     {
+        //These functions just tell PlayerPawn what direction to move.
         if (Input.GetKey(moveForward))
         {
             playerPawn.MoveForward(pawn.moveSpeed);
@@ -51,6 +52,7 @@ public class KeyboardController : PlayerController
         {
             playerPawn.MoveRight(-pawn.moveSpeed);
         }
+        playerPawn.MovePlayer(); //This function is what actually moves the player
         if (Input.GetKey(fire))
         {
             hose.ShootWater();
