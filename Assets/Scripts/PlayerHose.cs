@@ -114,7 +114,7 @@ public class PlayerHose : MonoBehaviour
     Vector2 GetWaterDestination()
     {
         Vector2 screenPosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2); //Gets the screen coordinates relative to the camera
-        Debug.Log(screenPosition);
+        //Debug.Log(screenPosition);
         Vector2 worldPosition = screenPosition * WATER_POINT_RATIO;
         Vector2 randomOffset = new Vector2(Random.Range(-PRECISION, PRECISION), Random.Range(-PRECISION, PRECISION));
         worldPosition += randomOffset;

@@ -21,6 +21,10 @@ public class WaterPoolManager : MonoBehaviour
         for(int i = 0; i < POOL_SIZE; i++)
         {
             GameObject water = Instantiate(waterPrefab);
+
+            //organize hierarchy
+            water.gameObject.transform.parent = this.transform;
+
             water.SetActive(false);
             waterPool.Enqueue(water);
         }
