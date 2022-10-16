@@ -20,6 +20,9 @@ public class PlayerSpawner : MonoBehaviour
 
         //organize hierarchy
         spawnedObject.gameObject.transform.parent = this.transform;
+
+        //reset health
+        spawnedObject.GetComponent<Health>().currentHealth = spawnedObject.GetComponent<Health>().maxHealth;
     }
 
    

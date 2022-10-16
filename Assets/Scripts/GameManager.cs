@@ -143,7 +143,11 @@ public class GameManager : MonoBehaviour
         //get a random spawner and spawn the player at it
         playerSpawnPoints[Random.Range(0, playerSpawnPoints.Count - 1)].GetComponent<PlayerSpawner>().SpawnPlayer();
 
+        //reset fires extinguished
+        firesPutOut = 0;
 
         gameplayStateObject.SetActive(true);
+
+        
     }
 }

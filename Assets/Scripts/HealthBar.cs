@@ -13,10 +13,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
 
-        if(GameManager.instance.players.Count > 0)
-        {
-            health = GameManager.instance.players[0].GetComponent<Health>();
-        }
+        
         
     }
 
@@ -27,6 +24,11 @@ public class HealthBar : MonoBehaviour
         {
             healthImage.fillAmount = health.currentHealth / health.maxHealth;
         }
-        
+
+        //should be called in the playerSpawner with a ref to GameManager... but we're close on time
+        if (GameManager.instance.players.Count > 0)
+        {
+            health = GameManager.instance.players[0].GetComponent<Health>();
+        }
     }
 }
