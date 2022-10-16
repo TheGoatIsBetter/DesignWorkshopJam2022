@@ -5,10 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerPawn : Pawn, Mover
 {
+    private Rigidbody2D rigidbodyComponent;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbodyComponent = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,22 +22,26 @@ public class PlayerPawn : Pawn, Mover
 
     public void MoveForward(float moveSpeed)
     {
-        Debug.Log('d');
+        //move rigidbody position forward at a rate of speed by time since last frame
+        rigidbodyComponent.MovePosition(transform.position += (transform.up * (moveSpeed * Time.deltaTime)));
     }
 
-    public void Turn(float turnSpeed)
+    public void MoveRight(float moveSpeed)
     {
-        Debug.Log('f');
+        //move rigidbody position right at a rate of speed by time since last frame
+        rigidbodyComponent.MovePosition(transform.position += (transform.right * (moveSpeed * Time.deltaTime)));
     }
+
+
 
     //public void MoveForward(float moveSpeed)
     //{
-        //move
+    //move
     //    if(mover != null)
     //    {
     //        mover.MoveForward(moveSpeed);
     //    }
     //}
 
-   
+
 }
