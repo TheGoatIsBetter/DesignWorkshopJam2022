@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     [SerializeField] private float hurtDamage;
+    private FireSpawner fireSpawner;
 
     //should probably be on the player and water respectively... no time
     private void OnTriggerStay2D(Collider2D collision)
@@ -26,7 +27,10 @@ public class Fire : MonoBehaviour
 
     public void Extinguish()
     {
+        fireSpawner.isOccupied = false;
+
         GameManager.instance.firesPutOut += 1;
+
 
         Destroy(gameObject);
     }
@@ -34,8 +38,9 @@ public class Fire : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
+        //set spawn ref
+        fireSpawner = gameObject.GetComponentInParent<FireSpawner>();
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     //static (stays same) game manager instance
     public static GameManager instance;
     public static AudioManager audioManager;
+    public FireManager fireManager;
     public Level level;
 
     public int firesPutOut = 0;
@@ -32,10 +33,6 @@ public class GameManager : MonoBehaviour
 
     #endregion variables
 
-    void Load(string savedData)
-    {
-        JsonUtility.FromJsonOverwrite(savedData, this);
-    }
 
     //Awake is called before Start
     private void Awake()
@@ -67,6 +64,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("yee");
+            foreach (FireSpawner fireSpawn in fireManager.fireSpawnerList)
+            {
+                fireSpawn.SpawnFire();
+            }
         }
 
     }
