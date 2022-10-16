@@ -8,8 +8,8 @@ public class KeyboardController : PlayerController
     [Header("Control Key Codes")]
     [SerializeField] private KeyCode moveForward;
     [SerializeField] private KeyCode moveBackward;
-    [SerializeField] private KeyCode turnRight;
-    [SerializeField] private KeyCode turnLeft;
+    [SerializeField] private KeyCode moveRight;
+    [SerializeField] private KeyCode moveLeft;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -30,10 +30,22 @@ public class KeyboardController : PlayerController
 
     protected override void ProcessInputs()
     {
-        //if (Input.GetKey(moveForward))
-        //{
-        //    playerPawn.MoveForward(pawn.moveSpeed);
-        //}
+        if (Input.GetKey(moveForward))
+        {
+            playerPawn.MoveForward(pawn.moveSpeed);
+        }
+        if (Input.GetKey(moveBackward))
+        {
+            playerPawn.MoveForward(-pawn.moveSpeed);
+        }
+        if (Input.GetKey(moveRight))
+        {
+            playerPawn.MoveRight(pawn.moveSpeed);
+        }
+        if (Input.GetKey(moveLeft))
+        {
+            playerPawn.MoveRight(-pawn.moveSpeed);
+        }
 
     }
 }
