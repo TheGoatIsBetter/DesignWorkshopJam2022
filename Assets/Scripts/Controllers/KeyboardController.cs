@@ -10,6 +10,7 @@ public class KeyboardController : PlayerController
     [SerializeField] private KeyCode moveBackward;
     [SerializeField] private KeyCode moveRight;
     [SerializeField] private KeyCode moveLeft;
+    [SerializeField] private KeyCode pause;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -46,6 +47,9 @@ public class KeyboardController : PlayerController
         {
             playerPawn.MoveRight(-pawn.moveSpeed);
         }
-
+        if (Input.GetKeyDown(pause))
+        {
+            GameManager.instance.PauseGame();
+        }
     }
 }

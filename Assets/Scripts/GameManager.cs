@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject controlsStateObject;
     [SerializeField] private GameObject creditsStateObject;
     [SerializeField] private GameObject gameplayStateObject;
+    public GameObject pausemenuStateObject;
 
 
     #endregion variables
@@ -63,6 +64,16 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void PauseGame()
+    {
+        AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.menuButton);
+        //set timescale back to 1 and resume game
+        Time.timeScale = 0;
+        GameManager.instance.pausemenuStateObject.SetActive(true);
+    }
+
+
+
     //deactivate all gamestates
     private void DeactivateAllStates()
     {
@@ -73,6 +84,7 @@ public class GameManager : MonoBehaviour
         controlsStateObject.SetActive(false);
         creditsStateObject.SetActive(false);
         gameplayStateObject.SetActive(false);
+        pausemenuStateObject.SetActive(false);
     }
 
     public void ActivateTitleScreenState()
