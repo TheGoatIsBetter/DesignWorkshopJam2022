@@ -31,7 +31,9 @@ public class Fire : MonoBehaviour
 
         GameManager.instance.firesPutOut += 1;
 
-        
+        AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.extinguish);
+
+
         Destroy(gameObject);
     }
 

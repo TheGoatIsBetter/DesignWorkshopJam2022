@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sounds")]
     public AudioClip menuButton;
+    public AudioClip extinguish;
+    public AudioClip fireCrackling;
 
     //Awake is called before Start
     private void Awake()
@@ -20,7 +22,7 @@ public class AudioManager : MonoBehaviour
             //don't kill it in a new scene.
             DontDestroyOnLoad(gameObject);
         }
-        else //this isn't THE game manager
+        else //this isn't THE audio manager
         {
             Destroy(gameObject);
         }

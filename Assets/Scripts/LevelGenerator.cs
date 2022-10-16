@@ -102,6 +102,9 @@ public class LevelGenerator : MonoBehaviour
         }
 
         GameManager.instance.fireManager.SpawnRandomFires();
+
+        //kickstart the crackling fire
+        level.GetComponent<FireCrackler>().fireCrackle.Play();
     }
 
     //get the next room in the sequence based on rules
