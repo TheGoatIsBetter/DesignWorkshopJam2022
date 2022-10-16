@@ -10,7 +10,11 @@ public class KeyboardController : PlayerController
     [SerializeField] private KeyCode moveBackward;
     [SerializeField] private KeyCode moveRight;
     [SerializeField] private KeyCode moveLeft;
+    [SerializeField] private KeyCode fire;
     [SerializeField] private KeyCode pause;
+
+    [Header("External References")]
+    [SerializeField] private PlayerHose hose;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -46,6 +50,10 @@ public class KeyboardController : PlayerController
         if (Input.GetKey(moveLeft))
         {
             playerPawn.MoveRight(-pawn.moveSpeed);
+        }
+        if (Input.GetKey(fire))
+        {
+            hose.ShootWater();
         }
         if (Input.GetKeyDown(pause))
         {

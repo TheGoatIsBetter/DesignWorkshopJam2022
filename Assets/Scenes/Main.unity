@@ -1291,6 +1291,8 @@ Transform:
   - {fileID: 99643833}
   - {fileID: 1422049983}
   - {fileID: 461628739}
+  - {fileID: 1488288724}
+  - {fileID: 1348893243}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6715,6 +6717,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333506299}
   m_CullTransparentMesh: 1
+--- !u!4 &1348893243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+  m_PrefabInstance: {fileID: 5814901459762990175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1378533454
 GameObject:
   m_ObjectHideFlags: 0
@@ -7914,6 +7921,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483285149}
   m_CullTransparentMesh: 1
+--- !u!1 &1488288723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1488288724}
+  - component: {fileID: 1488288725}
+  m_Layer: 0
+  m_Name: Water Pool Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1488288724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488288723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 209667963}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1488288725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488288723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd704bb9ece4d994a9ad71790026f9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterPrefab: {fileID: 1593339594541803509, guid: 0d93f0a9f1981a949af33b4ce87b21cd, type: 3}
 --- !u!1 &1519366367
 GameObject:
   m_ObjectHideFlags: 0
@@ -10549,6 +10601,14 @@ PrefabInstance:
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: fire
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_LocalPosition.x
