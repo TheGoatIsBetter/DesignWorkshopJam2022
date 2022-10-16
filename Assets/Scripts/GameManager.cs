@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     //static (stays same) game manager instance
     public static GameManager instance;
     public static AudioManager audioManager;
-    
+    public Level level;
+
     public int firesPutOut = 0;
 
     [Header("Lists")]
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("yee");
         }
-        
+
     }
 
     //deactivate all gamestates
