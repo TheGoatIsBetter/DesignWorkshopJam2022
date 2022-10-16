@@ -10175,8 +10175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 694568139}
   possibleRooms:
-  - {fileID: 705047120436831423, guid: ecbe77d90cd94eb4fa081cbc36762615, type: 3}
-  - {fileID: 705047120436831423, guid: 47ae71237b6bf74438130515819febb7, type: 3}
+  - {fileID: 37012055134008223, guid: 812394828e2635d43b66e2d895a1274c, type: 3}
+  - {fileID: 8078322715990899884, guid: 6c760e343cf03834c8907ec75bfd324a, type: 3}
   numberOfRows: 5
   numberOfCols: 5
   randomSeed: 0

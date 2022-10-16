@@ -51,11 +51,11 @@ MonoBehaviour:
   doorNorth: {fileID: 705047120691349017}
   floorNorth: {fileID: 2071369497546483118}
   doorSouth: {fileID: 705047120523085319}
-  floorSouth: {fileID: 3845885957471781080}
+  floorSouth: {fileID: 8681496936084768452}
   doorWest: {fileID: 705047121039916036}
-  floorWest: {fileID: 8681496936084768452}
+  floorWest: {fileID: 3657223168710339619}
   doorEast: {fileID: 705047120968391502}
-  floorEast: {fileID: 3657223168710339619}
+  floorEast: {fileID: 3845885957471781080}
   fireSpawner: {fileID: 0}
   doors: 01010101
   westObjects:
