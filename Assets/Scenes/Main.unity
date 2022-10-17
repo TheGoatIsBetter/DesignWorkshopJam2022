@@ -5805,6 +5805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireManager: {fileID: 1281520032}
   level: {fileID: 694568139}
+  playerSpawner: {fileID: 1331396906}
   firesPutOut: 0
   players: []
   playerSpawnPoints: []
@@ -6395,6 +6396,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329730506}
   m_CullTransparentMesh: 1
+--- !u!114 &1331396906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6150593614918234979, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
+  m_PrefabInstance: {fileID: 645606381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37469ac5508467b49b9a35725d537d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1333459552
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static AudioManager audioManager;
     public FireManager fireManager;
     public Level level;
+    public PlayerSpawner playerSpawner;
 
     public int firesPutOut = 0;
 
@@ -147,7 +148,8 @@ public class GameManager : MonoBehaviour
         }
 
         //get a random spawner and spawn the player at it
-        playerSpawnPoints[Random.Range(0, playerSpawnPoints.Count - 1)].GetComponent<PlayerSpawner>().SpawnPlayer();
+        //playerSpawnPoints[Random.Range(0, playerSpawnPoints.Count - 1)].GetComponent<PlayerSpawner>().SpawnPlayer();
+        playerSpawner.SpawnPlayer();
 
         //reset fires extinguished
         firesPutOut = 0;
