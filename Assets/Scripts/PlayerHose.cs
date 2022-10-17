@@ -101,7 +101,14 @@ public class PlayerHose : MonoBehaviour
         GameObject waterInstance = WaterPoolManager.waterPool.Dequeue();
         waterInstance.SetActive(true);
         waterInstance.transform.position = (Vector3)(waterDestination.normalized * WATER_BODY_OFFSET) + player.transform.position;
-        waterInstance.transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan(waterDestination.y / waterDestination.x));
+        if (Mathf.Rad2Deg * Mathf.Atan(waterDestination.y / waterDestination.x) > 180)
+        {
+            waterInstance.transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan(waterDestination.y / waterDestination.x));
+        }
+        else
+        {
+            waterInstance.transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan(waterDestination.y / waterDestination.x) + 180);
+        }
 
         //Passes the new data to the instance each time it is relocated.
         WaterMovement waterMovement = waterInstance.GetComponent<WaterMovement>();

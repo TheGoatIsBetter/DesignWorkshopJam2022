@@ -3048,22 +3048,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697671512}
     m_Modifications:
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: fire
-      value: 323
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: hose
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: pawn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6150593614918234972, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3111,6 +3095,22 @@ PrefabInstance:
     - target: {fileID: 6150593614918234973, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
       propertyPath: m_Name
       value: PlayerSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: fire
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: hose
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584354, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: pawn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814901461111584356, guid: 975d259da59902147943f1065a2c4cb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ade7b6a19316034da360887fa5ef9f6, type: 3}
@@ -10179,8 +10179,10 @@ MonoBehaviour:
   possibleRooms:
   - {fileID: 37012055134008223, guid: 812394828e2635d43b66e2d895a1274c, type: 3}
   - {fileID: 8078322715990899884, guid: 6c760e343cf03834c8907ec75bfd324a, type: 3}
-  numberOfRows: 5
-  numberOfCols: 5
+  - {fileID: 5812961137146535147, guid: 1a6c08dd322024245a313acf21c984a1, type: 3}
+  - {fileID: 2865972629050870480, guid: 265553bb846bbcd48890b92e63e467f6, type: 3}
+  numberOfRows: 3
+  numberOfCols: 3
   randomSeed: 0
 --- !u!1 &2026648911
 GameObject:
