@@ -25,7 +25,9 @@ public class Level : MonoBehaviour
         {
             GameManager.instance.fireManager.fireSpawnerList.Clear();
 
-            playerSpawns.Clear();
+            //playerSpawns.Clear();
+
+            GameManager.instance.playerSpawnPoints.Clear();
             foreach (Room room in grid)
             {
                 Destroy(room);

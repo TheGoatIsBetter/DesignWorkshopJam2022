@@ -28,6 +28,10 @@ public class FireCrackler : MonoBehaviour
         if (isFireGone())
         {
             fireCrackle.Stop();
+
+            GameManager.instance.isWinning = true;
+
+            GameManager.instance.ActivateGameOverState();
         }
 
 
