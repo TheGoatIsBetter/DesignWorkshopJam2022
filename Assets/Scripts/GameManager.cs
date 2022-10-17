@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Level level;
     public PlayerSpawner playerSpawner;
 
+    public bool isWinning = false;
+
     public int firesPutOut = 0;
 
 
@@ -62,14 +64,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("yee");
-            foreach (FireSpawner fireSpawn in fireManager.fireSpawnerList)
-            {
-                fireSpawn.SpawnFire();
-            }
-        }
+        
 
     }
 
@@ -140,6 +135,7 @@ public class GameManager : MonoBehaviour
         level.clearLevel();
         level.levelGenerator.GenerateLevel();
 
+        isWinning = false;
 
         //kill the player if they exist
         if (players.Count > 0)
